@@ -10,7 +10,7 @@ const OrderNowSection = () => {
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="bg-blue-500 text-white px-10 py-6 rounded-lg flex items-center justify-between w-60 md:w-72 shadow-lg cursor-pointer hover:bg-blue-600 transition-all relative"
+        className="bg-[#03bacc] text-white px-10 py-6 rounded-lg flex items-center justify-between w-60 md:w-72 shadow-lg cursor-pointer hover:bg-blue-600 transition-all relative"
       >
         <span className="text-xl font-bold">BOOK NOW</span>
         <span className="text-xl"><FaArrowRightLong /></span>

@@ -1,8 +1,9 @@
 import React from "react";
-
+import chillertruck from '../assets/chillertruck.png'
 import OurWorkSection from "../components/OurWorkSection";
 import { FiArrowRight } from "react-icons/fi";
-
+import chillerhiace from '../assets/hiace chiller.jpg'
+import { Link } from "react-router-dom";
 const AboutUs = () => {
     return (
 
@@ -34,13 +35,15 @@ const AboutUs = () => {
                         Serving Dubai, Abu Dhabi, Sharjah, and beyond, we bring our reliable transport
                         services to your doorstep across the UAE.
                     </p>
-                    <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-bold transition">
+                    <Link to='/contact'>
+                    <button className="bg-[#03bacc] text-white px-6 py-3 rounded-lg font-bold transition">
                         Contact us
                     </button>
+                    </Link>
                 </div>
                 <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
                     <img
-                        src="/mnt/data/image.png"
+                        src={chillerhiace }
                         alt="Fresh & Cool Transport Vehicles"
                         className="rounded-lg shadow-lg w-full max-w-md"
                     />
@@ -73,7 +76,7 @@ const AboutUs = () => {
                     />
                 </div>
             </section>
-            <section className="bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300 hover:from-blue-400 hover:via-blue-200 hover:to-blue-400 text-white p-8 md:p-12 rounded-lg shadow-md flex flex-col md:flex-row justify-between items-center transition-all duration-300">
+            <section className="bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300 hover:from-blue-400 my-4 hover:via-blue-200 hover:to-blue-400 text-white p-8 md:p-12 rounded-lg shadow-md flex flex-col md:flex-row justify-between items-center transition-all duration-300">
                 <div className="md:w-3/4">
                     <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-900">What We Offer</h2>
                     <p className="text-blue-800">
@@ -88,7 +91,7 @@ const AboutUs = () => {
                 <div className="md:w-1/4 flex justify-center mt-6 md:mt-0">
                     <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-bold flex items-center space-x-2 shadow-md hover:bg-gray-100 transition">
                         <FiArrowRight />
-                        <span>Contact Now</span>
+                      <Link to='/contact'><span>Contact Now</span></Link>  
                     </button>
                 </div>
             </section>

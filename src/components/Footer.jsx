@@ -5,7 +5,7 @@ import whtasapp from "../assets/whtasapp.webp"
 
 const Footer = () => {
   return (
-    <footer className="bg-white shadow-lg">
+    <footer className="bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300  text-black shadow-lg">
       {/* Main Footer Section */}
       <div className="container mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
         {/* Logo & Slogan */}
@@ -14,13 +14,13 @@ const Footer = () => {
             <img src={logo} alt="Logo1" className="w-36 h-12 mr-2" />
             <p> <span className="text-[#b4d364] font-bold">Fresh</span>  & <span className="text-blue-600 font-bold ">Cool</span> </p>
           </div>
-          <p className="mt-2 text-gray-600">Chill on the move: Our freeze trucks redefine freshness in motion.</p>
+          <p className="mt-2 text-black">Chill on the move: Our freeze trucks redefine freshness in motion.</p>
         </div>
 
         {/* Contact Us */}
         <div>
           <h3 className="font-semibold text-lg">Contact us</h3>
-          <ul className="mt-2 space-y-2 text-gray-600">
+          <ul className="mt-2 space-y-2 text-black">
             <li className="flex items-center space-x-2">
               <FaMapMarkerAlt className="text-blue-500" /> <span>United Arab Emirates</span>
             </li>
@@ -45,7 +45,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 gap-6">
           <div>
             <h3 className="font-semibold text-lg">Quick Links</h3>
-            <ul className="mt-2 space-y-2 text-gray-600">
+            <ul className="mt-2 space-y-2 text-black">
               <li>Terms & Conditions</li>
               <li>Privacy Policy</li>
               <li>Support</li>
@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="font-semibold text-lg">Services</h3>
-            <ul className="mt-2 space-y-2 text-gray-600">
+            <ul className="mt-2 space-y-2 text-black">
               <li>Chiller Van Rental</li>
               <li>Freezer Van Rental</li>
               <li>Cold Transport</li>
@@ -63,7 +63,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gradient-to-r from-blue-300 via-blue-100 to-blue-300  text-center py-3 font-medium">
+      <div className=" text-center py-3 font-medium text-black">
         Copyright © Fresh&Cool 2025 All Rights Reserved.
       </div>
 

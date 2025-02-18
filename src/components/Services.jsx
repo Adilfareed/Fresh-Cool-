@@ -50,7 +50,7 @@ const ServicesSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
-            className="bg-white p-6 border border-blue-400 rounded-lg shadow-md hover:shadow-xl transition-all relative"
+            className="bg-white p-6 border hover:bg-[#03bacc] hover:text-white border-blue-400 rounded-lg shadow-md hover:shadow-xl transition-all relative"
           >
             <h3 className="text-xl font-semibold">{service.title}</h3>
             <p className="text-gray-600 mt-2">{service.description}</p>

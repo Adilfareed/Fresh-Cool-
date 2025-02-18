@@ -53,7 +53,7 @@ const Navbar = () => {
             )}
           </div>
           <Link to="/contact" className="hover:text-blue-500">Contact Us</Link>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Get A Quote</button>
+        <Link to='/contact'>  <button className="bg-[#03bacc] hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Get A Quote</button> </Link>  
         </div>
 
         {/* Mobile Menu Button */}
@@ -93,7 +93,7 @@ const Navbar = () => {
               )}
             </div>
             <Link to="/contact" className="hover:text-blue-500" onClick={closeNavbar}>Contact Us</Link>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-lg w-3/4" onClick={closeNavbar}>Get A Quote</button>
+            <button className="bg-[#03bacc] text-white px-4 py-2 rounded-lg w-3/4" onClick={closeNavbar}>Get A Quote</button>
           </div>
         </motion.div>
       )}

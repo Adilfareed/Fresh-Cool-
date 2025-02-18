@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/About";
 import Contact from "./pages/Contact";
+import FAQSection from "./pages/FAQSection";
 
 const Layout = ({ children }) => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faqs" element={<FAQSection />} />
         </Routes>
       </Layout>
    

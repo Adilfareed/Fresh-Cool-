@@ -35,7 +35,7 @@ const Contact = () => {
             <input type="email" placeholder="Email" className="w-full p-3 mb-4 border rounded" />
             <input type="text" placeholder="Phone" className="w-full p-3 mb-4 border rounded" />
             <textarea placeholder="Get a message" className="w-full p-3 mb-4 border rounded"></textarea>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold w-full hover:bg-green-700 transition">
+            <button className="bg-[#03bacc] text-white px-6 py-3 rounded-lg font-bold w-full hover:bg-blue-700 transition">
               Get A Quick Quote
             </button>
           </form>
