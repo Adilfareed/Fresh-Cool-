@@ -42,7 +42,7 @@ const serviceHighlights = [
 
 export default function ChillerVanSection() {
   return (
-    <section className="container mx-auto px-6 py-12 bg-amber-50">
+    <section className="container mx-auto px-6 py-12 ">
       <div className="grid md:grid-cols-2 gap-8">
 
         <div>
