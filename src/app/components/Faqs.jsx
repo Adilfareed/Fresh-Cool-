@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
@@ -25,7 +27,7 @@ const FAQSection = () => {
 
   return (
     <div className="bg-gray-100 py-12 px-6 md:px-20">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-6">
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-6 text-gray-800">
         FAQ related to Chiller Van for rent in Dubai
       </h2>
 
@@ -36,7 +38,7 @@ const FAQSection = () => {
               onClick={() => toggleFAQ(index)}
               className="w-full flex justify-between items-center p-4 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50"
             >
-              <span className="text-lg font-semibold">{faq.question}</span>
+              <span className="text-lg font-semibold text-gray-800 ">{faq.question}</span>
               {openIndex === index ? <FaMinus className="text-gray-600" /> : <FaPlus className="text-gray-600" />}
             </button>
 

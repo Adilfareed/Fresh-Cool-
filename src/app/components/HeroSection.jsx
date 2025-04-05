@@ -1,6 +1,8 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const HeroSection = () => {
   const ref = useRef(null);
@@ -8,7 +10,7 @@ const HeroSection = () => {
 
   return (
     <div
-      ref={ref} // Attach ref to the div
+      ref={ref}
       className="relative w-full h-screen flex items-center justify-center text-white"
       style={{
         backgroundImage: "url('/hice.webp')",
@@ -24,11 +26,11 @@ const HeroSection = () => {
         {/* Main Heading */}
         <motion.h1
           initial={{ x: 100, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} // Reset animation when out of view
+          animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
           transition={{ duration: 1 }}
           className="text-4xl md:text-6xl font-bold mt-10 text-[#03bacc]"
         >
-          Best Refrigerator Trucks In UAE
+          Best Refrigerator Vans In UAE
         </motion.h1>
 
         {/* Subheading */}
@@ -45,15 +47,15 @@ const HeroSection = () => {
         </motion.p>
 
         {/* Button */}
-        <Link to='/about'>
-        <motion.button
-          initial={{ x: -100, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="mt-6 px-6 py-3 bg-[#03bacc] rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 transition-all"
-        >
-          Get Started
-        </motion.button>
+        <Link href="/about">
+          <motion.button
+            initial={{ x: -100, opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="mt-6 px-6 py-3 bg-[#03bacc] rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 transition-all"
+          >
+            Get Started
+          </motion.button>
         </Link>
       </div>
     </div>

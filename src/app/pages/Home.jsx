@@ -1,7 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 
-import Footer from '../components/Footer'
 
 import OurWorkSection from '../components/OurWorkSection'
 import ServicesSection from '../components/Services'

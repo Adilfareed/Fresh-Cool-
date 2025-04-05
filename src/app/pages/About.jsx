@@ -10,9 +10,9 @@ const AboutUs = () => {
         <div>
             <section className="flex flex-col md:flex-row items-center bg-white py-10 px-6 md:px-16 lg:px-24">
                 <div className="w-full md:w-1/2 flex flex-col space-y-4">
-                    <h2 className="text-3xl font-bold text-gray-900">About Fresh & Cool Transport</h2>
+                    <h2 className="text-3xl font-bold text-gray-900">About Fresh & Cooled Transport</h2>
                     <p className="text-gray-700">
-                        At Fresh & Cool Transport, we are dedicated to providing top-tier
+                        At Fresh & Cooled Transport, we are dedicated to providing top-tier
                         refrigerated transport solutions across the UAE. With years of
                         experience in the industry, we specialize in chiller van rentals, freezer
                         vehicle hire, and comprehensive cold chain logistics. Our mission is

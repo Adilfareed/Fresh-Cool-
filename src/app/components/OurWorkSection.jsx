@@ -1,25 +1,29 @@
+"use client";
+
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image"; // Next.js image optimization
 import { FaLightbulb, FaTasks, FaUsers, FaTruck } from "react-icons/fa";
-import chillertruck from '../assets/chillertruck.png';
+import chillertruck from "../../../public/assets/chillertruck.png";
 
 const Counter = ({ target }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     let start = 0;
-    const end = target;
-    const duration = 2000; // Duration in ms
-    const increment = Math.ceil(end / (duration / 50));
+    const duration = 2000; // 2 seconds
+    const stepTime = 50; // Interval duration
+    const increment = Math.ceil(target / (duration / stepTime));
 
     const timer = setInterval(() => {
       start += increment;
-      if (start >= end) {
-        start = end;
+      if (start >= target) {
+        setCount(target);
         clearInterval(timer);
+      } else {
+        setCount(start);
       }
-      setCount(start);
-    }, 50);
+    }, stepTime);
 
     return () => clearInterval(timer);
   }, [target]);
@@ -29,12 +33,12 @@ const Counter = ({ target }) => {
 
 const OurWorkSection = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <div ref={ref} className="bg-gray-100 py-12 px-6 md:px-20 text-center">
       <h3 className="text-blue-600 uppercase text-sm font-semibold">Our Work</h3>
-      <h2 className="text-3xl md:text-4xl font-bold mt-2">
+      <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gray-800">
         We Create A Honest, Hassle-Free And <br />
         Quality Moving Experience
       </h2>
@@ -47,7 +51,12 @@ const OurWorkSection = () => {
           transition={{ duration: 1 }}
           className="w-full"
         >
-          <img src={chillertruck} alt="Moving Truck" className="w-full rounded-lg shadow-lg" />
+          <Image
+            src={chillertruck}
+            alt="Moving Truck"
+            className="w-full rounded-lg shadow-lg"
+            priority
+          />
         </motion.div>
 
         {/* Stats Section */}
@@ -60,7 +69,7 @@ const OurWorkSection = () => {
             className="bg-white p-6 border border-blue-400 rounded-lg shadow-md"
           >
             <FaLightbulb className="text-orange-500 text-3xl mb-2 mx-auto" />
-            <h3 className="text-2xl font-bold">
+            <h3 className="text-2xl font-bold text-gray-800">
               <Counter target={1200} />
             </h3>
             <p className="text-gray-600">Satisfied Clients</p>
@@ -74,7 +83,7 @@ const OurWorkSection = () => {
             className="bg-white p-6 border border-blue-400 rounded-lg shadow-md"
           >
             <FaTasks className="text-orange-500 text-3xl mb-2 mx-auto" />
-            <h3 className="text-2xl font-bold">
+            <h3 className="text-2xl font-bold text-gray-800">
               <Counter target={9600} />
             </h3>
             <p className="text-gray-600">Jobs Done</p>
@@ -88,10 +97,10 @@ const OurWorkSection = () => {
             className="bg-white p-6 border border-blue-400 rounded-lg shadow-md"
           >
             <FaUsers className="text-orange-500 text-3xl mb-2 mx-auto" />
-            <h3 className="text-2xl font-bold">
+            <h3 className="text-2xl font-bold text-gray-800">
               <Counter target={60} />
             </h3>
-            <p className="text-gray-600">Experienced Team</p>
+            <p className="text-gray-600 ">Experienced Team</p>
           </motion.div>
 
           {/* Vehicles */}
@@ -102,7 +111,7 @@ const OurWorkSection = () => {
             className="bg-white p-6 border border-blue-400 rounded-lg shadow-md"
           >
             <FaTruck className="text-orange-500 text-3xl mb-2 mx-auto" />
-            <h3 className="text-2xl font-bold">
+            <h3 className="text-2xl font-bold text-gray-800">
               <Counter target={60} />+
             </h3>
             <p className="text-gray-600">Vehicles</p>

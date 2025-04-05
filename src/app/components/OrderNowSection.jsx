@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -12,9 +15,10 @@ const OrderNowSection = () => {
         transition={{ duration: 1 }}
         className="bg-[#03bacc] text-white px-10 py-6 rounded-lg flex items-center justify-between w-60 md:w-72 shadow-lg cursor-pointer hover:bg-blue-600 transition-all relative"
       >
-        <span className="text-xl font-bold">BOOK NOW</span>
-        <span className="text-xl"><FaArrowRightLong /></span>
-        
+    <Link href="/contact">  <span className="text-xl font-bold">BOOK NOW</span> </Link>  
+        <span className="text-xl">
+          <FaArrowRightLong />
+        </span>
       </motion.div>
 
       {/* Contact Details Container */}
@@ -45,7 +49,7 @@ const OrderNowSection = () => {
           <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
           <div className="flex items-center space-x-3 mt-3">
             <FaPhone className="text-gray-500 text-2xl" />
-            <span className="text-lg text-gray-700">055-1447348</span>
+            <span className="text-lg text-gray-700">+923303949638</span>
           </div>
         </motion.div>
       </div>

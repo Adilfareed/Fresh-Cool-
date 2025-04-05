@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { FaStar, FaUserCircle } from "react-icons/fa";
 import Slider from "react-slick";
@@ -50,7 +52,7 @@ const ReviewsSection = () => {
   return (
     <div className="bg-gray-100 py-12 px-6 md:px-20 text-center">
       <h3 className="text-blue-600 uppercase text-sm font-semibold">Customer Reviews</h3>
-      <h2 className="text-3xl md:text-4xl font-bold mt-2">What Our Clients Say</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gray-800">What Our Clients Say</h2>
 
       {/* Reviews Carousel */}
       <div className="mt-8">
@@ -66,7 +68,7 @@ const ReviewsSection = () => {
               <div className="bg-white p-6 border border-gray-300 rounded-lg shadow-lg text-left mx-2">
                 <div className="flex items-center space-x-3">
                   <FaUserCircle className="text-gray-500 text-4xl" />
-                  <h3 className="text-lg font-semibold">{review.username}</h3>
+                  <h3 className="text-lg font-semibold text-gray-800">{review.username}</h3>
                 </div>
                 <p className="text-gray-600 mt-2">{review.description}</p>
                 <div className="flex mt-3 text-yellow-500">
