@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <div
       ref={ref}
-      className="relative w-full h-screen flex items-center justify-center text-white"
+      className="relative w-full h-screen overflow-hidden flex items-center justify-center text-white"
       style={{
         backgroundImage: "url('/hice.webp')",
         backgroundSize: "cover",
